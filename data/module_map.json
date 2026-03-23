@@ -1,0 +1,44 @@
+[
+  {
+    "module": "payment-service",
+    "depends_on": ["order-service"],
+    "description": "Handles payment processing and retries",
+    "team": "Payments",
+    "criticality": "High"
+  },
+  {
+    "module": "order-service",
+    "depends_on": ["inventory-service"],
+    "description": "Manages order lifecycle and callbacks",
+    "team": "Orders",
+    "criticality": "High"
+  },
+  {
+    "module": "inventory-service",
+    "depends_on": [],
+    "description": "Maintains stock and reservations",
+    "team": "Inventory",
+    "criticality": "Medium"
+  },
+  {
+    "module": "notification-service",
+    "depends_on": ["order-service"],
+    "description": "Sends order and payment notifications",
+    "team": "Notifications",
+    "criticality": "Medium"
+  },
+  {
+    "module": "fraud-service",
+    "depends_on": ["payment-service"],
+    "description": "Evaluates suspicious payment behavior",
+    "team": "Risk",
+    "criticality": "High"
+  },
+  {
+    "module": "user-profile-service",
+    "depends_on": [],
+    "description": "Stores user preferences and profile details",
+    "team": "Profile",
+    "criticality": "Low"
+  }
+]

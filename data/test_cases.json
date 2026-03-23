@@ -1,0 +1,51 @@
+[
+  {
+    "test_id": "TC-001",
+    "module": "payment-service",
+    "title": "Verify payment success flow",
+    "steps": "Create order, initiate payment, validate success callback",
+    "expected_result": "Payment status becomes SUCCESS"
+  },
+  {
+    "test_id": "TC-002",
+    "module": "payment-service",
+    "title": "Verify payment retry does not duplicate settlement",
+    "steps": "Trigger retry after timeout and check settlement records",
+    "expected_result": "Only one settlement entry exists"
+  },
+  {
+    "test_id": "TC-003",
+    "module": "order-service",
+    "title": "Verify order confirmation after payment callback",
+    "steps": "Place order, process payment, validate order state transition",
+    "expected_result": "Order becomes CONFIRMED"
+  },
+  {
+    "test_id": "TC-004",
+    "module": "inventory-service",
+    "title": "Verify stock reduction after purchase",
+    "steps": "Purchase an item and check inventory count",
+    "expected_result": "Inventory decreases correctly"
+  },
+  {
+    "test_id": "TC-005",
+    "module": "notification-service",
+    "title": "Verify order confirmation notification",
+    "steps": "Confirm an order and validate notification generation",
+    "expected_result": "Single confirmation message is sent"
+  },
+  {
+    "test_id": "TC-006",
+    "module": "fraud-service",
+    "title": "Verify fraud rule evaluation on suspicious payment",
+    "steps": "Submit risky transaction and validate fraud response",
+    "expected_result": "Transaction is flagged correctly"
+  },
+  {
+    "test_id": "TC-007",
+    "module": "user-profile-service",
+    "title": "Verify profile update persistence",
+    "steps": "Update user profile fields and fetch profile again",
+    "expected_result": "Updated values are stored correctly"
+  }
+]

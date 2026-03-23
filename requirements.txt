@@ -1,0 +1,14 @@
+langchain
+langchain-groq
+langgraph
+chromadb
+sentence-transformers
+streamlit
+networkx
+plotly
+pandas
+python-dotenv
+python-docx
+
+
+

@@ -1,0 +1,38 @@
+[
+  {
+    "defect_id": "DEF-101",
+    "module": "payment-service",
+    "severity": "High",
+    "root_cause": "duplicate settlement during retry"
+  },
+  {
+    "defect_id": "DEF-102",
+    "module": "payment-service",
+    "severity": "High",
+    "root_cause": "callback race condition"
+  },
+  {
+    "defect_id": "DEF-103",
+    "module": "order-service",
+    "severity": "Medium",
+    "root_cause": "incorrect order confirmation state"
+  },
+  {
+    "defect_id": "DEF-104",
+    "module": "inventory-service",
+    "severity": "Low",
+    "root_cause": "delayed reservation update"
+  },
+  {
+    "defect_id": "DEF-105",
+    "module": "fraud-service",
+    "severity": "High",
+    "root_cause": "threshold misconfiguration"
+  },
+  {
+    "defect_id": "DEF-106",
+    "module": "notification-service",
+    "severity": "Medium",
+    "root_cause": "duplicate customer message"
+  }
+]
